@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios/32/000000/spark-plug-filled.png">
+    <title>Inscrivez vous-GarageFinder</title>
+</head>
+
+<body>
+    <header>
+        <!--Header navbar only-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><i class="fas fa-car fa-2x"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#elementor">Nos Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Prenez Rendez-Vous</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Je m'inscris
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="formgar.html">Garagiste</a>
+                            <a class="dropdown-item" href="formpart.html">Particulier </a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- formulaire de log modal -->
+                <div class="log">
+                    <div id="logout" class="hide"><a href="">logout</a></div>
+                    <div class="modal fade" id="modalsigninForm" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form id="signinForm">
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-4">
+                                            <label class="label" data-error="wrong" data-success="right"
+                                                for="defaultForm-email">
+                                                <i class="far fa-envelope-open"></i>
+                                            </label>
+                                            <input type="email" id="signinMail" class="form-control validate"
+                                                placeholder="Your mail">
+                                        </div>
+
+                                        <div class="md-form mb-5">
+                                            <label class="label" data-error="wrong" data-success="right"
+                                                for="defaultForm-pass">
+                                                <i class="fas fa-lock prefix grey-text"></i>
+                                            </label>
+                                            <input type="password" id="signinPass" class="form-control validate"
+                                                placeholder="Your Password">
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button id="btnSignin" type="submit" class="btn btn-default">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalsignupForm" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Sign Up</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form id="signupForm">
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-4">
+                                            <label class="label" data-error="wrong" data-success="right"
+                                                for="defaultForm-email">
+                                                <i class="far fa-envelope-open"></i>
+                                            </label>
+                                            <input type="email" id="signupMail" class="form-control validate"
+                                                placeholder="Your mail">
+                                        </div>
+
+                                        <div class="md-form mb-5">
+                                            <label class="label" data-error="wrong" data-success="right"
+                                                for="defaultForm-pass">
+                                                <i class="fas fa-lock prefix grey-text"></i>
+                                            </label>
+                                            <input type="password" id="signupPass" class="form-control validate"
+                                                placeholder="Your Password">
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button id="btnSignup" class="btn btn-default">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="" class="btn btn-default btn-rounded mb-4" id="signin" data-toggle="modal"
+                            data-target="#modalsigninForm">Sign In</a>
+                        <a href="" class="btn btn-default btn-rounded mb-4" id="signup" data-toggle="modal"
+                            data-target="#modalsignupForm">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- formulaire d'inscription -->
+    <div class="container">
+        <h1 class="formpage">Formulaire d'inscription pour particulier</h1>
+        <div class="formulaire">
+            <div class="col-lg-8 offset-lg-2">
+                <form id="contactForm">
+                    <div class="infoperso">
+                        <h5>Infromations Personnelles</h5>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label class="label" for="nom">
+                                    <i class="fas fa-user"></i>
+                                </label>
+                                <input type="text" name="nom" placeholder="Nom" class="form-control" id="nom">
+                            </div>
+                            <div class="col-12">
+                                <label class="label" for="prenom">
+                                    <i class="fas fa-user-plus"></i>
+                                </label>
+                                <input type="text" name="prenom" placeholder="prenom" class="form-control" id="prenom">
+                            </div>
+                            <div class="col-12">
+                                <label class="label" for="adresse">
+                                    <i class="fas fa-map-pin"></i>
+                                </label>
+                                <input type="text" name="adresse" placeholder="Adresse" class="form-control"
+                                    id="adresse">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="ville" placeholder="Ville" class="form-control" id="ville">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" name="codepostal" placeholder="Code Postal" class="form-control"
+                                    min="1000" max="3253" id="codepostal">
+                            </div>
+                            <div class="col-6">
+                                <label class="label" for="tel">
+                                    <i class="fas fa-phone"></i>
+                                </label>
+                                <input type="tel" name="tel" placeholder="Num Tel" class="form-control" id="tel">
+                            </div>
+                            <div class="col-6">
+                                <label class="label" for="fax">
+                                    <i class="fas fa-fax"></i>
+                                </label>
+                                <input type="tel" name="tel" placeholder="Num Fax" class="form-control" id="fax">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infovh">
+                        <h5>Informations sur le véhicule</h5>
+                        <div class="form-group row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="marque">
+                                    <i class="fas fa-car"></i>
+                                </label>
+                                <input type="text" name="marque" placeholder="Marque" class="form-control" id="marque">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="marque">
+                                    <i class="fas fa-car"></i>
+                                </label>
+                                <input type="text" name="model" placeholder="Model" class="form-control" id="model">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="vin">
+                                    <i class="fas fa-fingerprint"></i>
+                                </label>
+                                <input type="text" name="vin" placeholder="VIN-N° de chassis du véhicule"
+                                    class="form-control" id="vin">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="matricul">
+                                    <i class="fas fa-fingerprint"></i>
+                                </label>
+                                <input type="text" name="matricul" placeholder="1234-TU-111" class="form-control"
+                                    id="matricul">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </label>
+                                <input type="date" name="date" placeholder="Date de mise en circulation"
+                                    class="form-control" id="date">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label class="label" for="date">
+                                    <i class="fas fa-road"></i>
+                                </label>
+                                <input type="number" name="distance" placeholder="Kilométrage parcourus"
+                                    class="form-control" id="distance">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <input type="submit" value="Envoyer" name="envoie-data" class="btn btn-danger" id="validation">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="maps"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12770.40579887525!2d10.20955275!3d36.85202004999999!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2stn!4v1555970841401!5m2!1sfr!2stn"
+            width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-dark text-white p-4">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <i class="fab fa-facebook-f fa-2x"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <i class="fab fa-twitter fa-2x"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <i class="fab fa-google-plus-g fa-2x"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <i class="fab fa-linkedin-in fa-2x"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <i class="fab fa-dribbble fa-2x"> </i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social buttons -->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> ZIED JLASSI</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- boostrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- extension -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="js/animate-scroll.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="js/firebaseInit.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- perso -->
+    <script src="js/main.js"></script>
+
+</html>
